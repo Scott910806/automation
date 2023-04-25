@@ -1,0 +1,202 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "7",
+  "testDataList": [
+    {
+      "documentId": 171,
+      "documentName": "测试文档6",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "7",
+      "testDocumentVariableSummaryVo": {
+        "input": [
+          {
+            "testValue": "scott",
+            "varDesc": "name",
+            "varKey": "name",
+            "varType": "String"
+          },
+          {
+            "varDesc": "state",
+            "varKey": "state",
+            "varType": "String",
+            "testValue": "CA"
+          },
+          {
+            "varDesc": "previousState",
+            "varKey": "previousState",
+            "varType": "String",
+            "testValue": "SO"
+          },
+          {
+            "varDesc": "grade",
+            "varKey": "grade",
+            "varType": "String",
+            "testValue": "B"
+          },
+          {
+            "varDesc": "phoneNumber",
+            "varKey": "phoneNumber",
+            "varType": "String",
+            "testValue": "911-1234897"
+          },
+          {
+            "varDesc": "city",
+            "varKey": "city",
+            "varType": "String",
+            "testValue": "L  A"
+          },
+          {
+            "varDesc": "email",
+            "varKey": "email",
+            "varType": "String",
+            "testValue": "yxma@shuhe.c"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "cost",
+                "varKey": "cost",
+                "varType": "Double",
+                "testValue": "128.76"
+              },
+              {
+                "testValue": "45",
+                "varDesc": "age",
+                "varKey": "age",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "price",
+                "varKey": "price",
+                "varType": "Double",
+                "testValue": "1000"
+              }
+            ],
+            "varDesc": "numeric",
+            "varKey": "numeric",
+            "varType": "Object"
+          }
+        ],
+        "inner": [],
+        "output": [
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "simpleFormat",
+                "varKey": "simpleFormat",
+                "varType": "String"
+              },
+              {
+                "varDesc": "betterFormat",
+                "varKey": "betterFormat",
+                "varType": "String"
+              },
+              {
+                "varDesc": "gradeCategory",
+                "varKey": "gradeCategory",
+                "varType": "String"
+              },
+              {
+                "varDesc": "eligible",
+                "varKey": "eligible",
+                "varType": "String"
+              },
+              {
+                "varDesc": "isEmergency",
+                "varKey": "isEmergency",
+                "varType": "Boolean"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "varDesc": "items",
+                    "varKey": "items0",
+                    "varType": "String"
+                  }
+                ],
+                "varDesc": "invaildFields",
+                "varKey": "invaildFields",
+                "varType": "Array"
+              },
+              {
+                "varDesc": "lastInvaildField",
+                "varKey": "lastInvaildField",
+                "varType": "String"
+              },
+              {
+                "varDesc": "firstInvaildField",
+                "varKey": "firstInvaildField",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "simpleExamples",
+            "varKey": "simpleExamples",
+            "varType": "Object"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "description",
+                "varKey": "description",
+                "varType": "String"
+              },
+              {
+                "varDesc": "betterDescription",
+                "varKey": "betterDescription",
+                "varType": "String"
+              },
+              {
+                "varDesc": "isRoundPrice",
+                "varKey": "isRoundPrice",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "assignVariable",
+                "varKey": "assignVariable",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "age45",
+                "varKey": "age45",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "age44Plus",
+                "varKey": "age44Plus",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "age46Mins",
+                "varKey": "age46Mins",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "ageCheck",
+                "varKey": "ageCheck",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "ageCategory",
+                "varKey": "ageCategory",
+                "varType": "String"
+              },
+              {
+                "varDesc": "ageBetween40And50",
+                "varKey": "ageBetween40And50",
+                "varType": "Boolean"
+              },
+              {
+                "varDesc": "age18MinsOr60Plus",
+                "varKey": "age18MinsOr60Plus",
+                "varType": "Boolean"
+              }
+            ],
+            "varDesc": "numericExamples",
+            "varKey": "numericalExamples",
+            "varType": "Object"
+          }
+        ]
+      }
+    }
+  ]
+}

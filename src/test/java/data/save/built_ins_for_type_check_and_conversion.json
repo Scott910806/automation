@@ -1,0 +1,313 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "5",
+  "decisionFlowConfig": {
+    "decisionFlowKey": "decisionFlow_igsakxwp",
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "c0760f1d-0f45-4ef9-af4f-c7143056c7eb",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "类型转换",
+        "nodeKey": "4f1c7b17-b8fb-4fc4-9e72-86905fc342cc",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_eypcvpfu",
+            "ruleList": [
+              {
+                "action": "toInteger = ToInteger(\"5\");\ntoDouble = ToDouble(\"3.14\");\ntoDecimal = ToDecimal(\"3.1415926\");\nintegerToString = ToString(integerVar);\ndoubleToString = ToString(doubleVar)",
+                "condition": "true",
+                "ruleKey": "rule_nriocjwf",
+                "ruleName": "to",
+                "status": 1,
+                "id": "rule_nriocjwf",
+                "pid": "ruleset_splrschs",
+                "index": 0
+              },
+              {
+                "action": "isInteger = IsInteger(\"2.78\");\nisDouble = IsDouble(\"7\")",
+                "condition": "IsInteger(\"9\") and IsDouble(\"9.999\")",
+                "ruleKey": "rule_eeskgviw",
+                "ruleName": "is",
+                "status": 1,
+                "id": "rule_eeskgviw",
+                "pid": "ruleset_splrschs",
+                "index": 1
+              }
+            ],
+            "rulesetKey": "ruleset_splrschs",
+            "rulesetName": "check&transfer",
+            "status": 1,
+            "id": "ruleset_splrschs",
+            "index": 0
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_eypcvpfu",
+            "ruleList": [
+              {
+                "action": "decimalCompare = \"decimalVar1 is greater than decimalVar2\"",
+                "condition": "decimalVar1 > decimalVar2",
+                "ruleKey": "rule_gislhods",
+                "ruleName": "greater&less",
+                "status": 1,
+                "id": "rule_gislhods",
+                "pid": "ruleset_qxceibhd",
+                "index": 0
+              },
+              {
+                "action": "decimalAdd = decimalVar1 + decimalVar2;\ndecimalSub = decimalVar1 - decimalVar2;\ndecimalMul = decimalVar1 * decimalVar2;\ndecimalDiv = decimalVar1 / decimalVar2",
+                "condition": "true",
+                "ruleKey": "rule_ztaeblln",
+                "ruleName": "calculation",
+                "status": 1,
+                "id": "rule_ztaeblln",
+                "pid": "ruleset_qxceibhd",
+                "index": 1
+              }
+            ],
+            "rulesetKey": "ruleset_qxceibhd",
+            "rulesetName": "decimal",
+            "status": 1,
+            "id": "ruleset_qxceibhd",
+            "index": 1
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "c0760f1d-0f45-4ef9-af4f-c7143056c7eb",
+        "targetNodeKey": "4f1c7b17-b8fb-4fc4-9e72-86905fc342cc",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "integerVar",
+        "varKey": "integerVar",
+        "varSource": "CONTEXT",
+        "varType": "Integer",
+        "path": "integerVar"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "doubleVar",
+        "varKey": "doubleVar",
+        "varSource": "CONTEXT",
+        "varType": "Double",
+        "path": "doubleVar"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "decimalVar1",
+        "varKey": "decimalVar1",
+        "varSource": "CONTEXT",
+        "varType": "Decimal",
+        "path": "decimalVar1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "decimalVar1",
+        "varKey": "decimalVar2",
+        "varSource": "CONTEXT",
+        "varType": "Decimal",
+        "path": "decimalVar2"
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "isInteger",
+        "varKey": "isInteger",
+        "varType": "Boolean",
+        "path": "isInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "isDouble",
+        "varKey": "isDouble",
+        "varType": "Boolean",
+        "path": "isDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "integerToString",
+        "varKey": "integerToString",
+        "varType": "String",
+        "path": "integerToString"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "toInteger",
+        "varKey": "toInteger",
+        "varType": "Integer",
+        "path": "toInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "toDouble",
+        "varKey": "toDouble",
+        "varType": "Double",
+        "path": "toDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "toDecimal",
+        "varKey": "toDecimal",
+        "varType": "Decimal",
+        "path": "toDecimal"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "doubleToString",
+        "varKey": "doubleToString",
+        "varType": "String",
+        "path": "doubleToString"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "decimalCompare",
+        "varKey": "decimalCompare",
+        "varType": "String",
+        "path": "decimalCompare"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "decimalAdd",
+        "varKey": "decimalAdd",
+        "varType": "Decimal",
+        "path": "decimalAdd"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "decimalSub",
+        "varKey": "decimalSub",
+        "varType": "Decimal",
+        "path": "decimalSub"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "decimalMul",
+        "varKey": "decimalMul",
+        "varType": "Decimal",
+        "path": "decimalMul"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "decimalDiv",
+        "varKey": "decimalDiv",
+        "varType": "Decimal",
+        "path": "decimalDiv"
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

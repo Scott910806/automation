@@ -1,0 +1,478 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "6",
+  "testDataList": [
+    {
+      "documentId": 170,
+      "documentName": "测试文档5",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "6",
+      "testDocumentVariableSummaryVo": {
+        "input": [
+          {
+            "childTestDocumentVariableList": [
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "scott",
+                    "varDesc": "名字",
+                    "varKey": "firstName",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "30",
+                    "varDesc": "年龄",
+                    "varKey": "age",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "true",
+                    "varDesc": "标记",
+                    "varKey": "flagged",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "是否为学生",
+                    "varKey": "isStudent",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "C",
+                    "varDesc": "级别",
+                    "varKey": "rank",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "2",
+                    "varDesc": "票数",
+                    "varKey": "tickets",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "approved",
+                    "varKey": "approved",
+                    "varType": "Boolean"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "yuliangliang",
+                    "varDesc": "名字",
+                    "varKey": "firstName",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "31",
+                    "varDesc": "年龄",
+                    "varKey": "age",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "true",
+                    "varDesc": "标记",
+                    "varKey": "flagged",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "是否为学生",
+                    "varKey": "isStudent",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "B",
+                    "varDesc": "级别",
+                    "varKey": "rank",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "5",
+                    "varDesc": "票数",
+                    "varKey": "tickets",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "true",
+                    "varDesc": "approved",
+                    "varKey": "approved",
+                    "varType": "Boolean"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items1",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "tianxiPlus",
+                    "varDesc": "名字",
+                    "varKey": "firstName",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "26",
+                    "varDesc": "年龄",
+                    "varKey": "age",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "标记",
+                    "varKey": "flagged",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "是否为学生",
+                    "varKey": "isStudent",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "B",
+                    "varDesc": "级别",
+                    "varKey": "rank",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "0",
+                    "varDesc": "票数",
+                    "varKey": "tickets",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "true",
+                    "varDesc": "approved",
+                    "varKey": "approved",
+                    "varType": "Boolean"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items2",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "tianxi",
+                    "varDesc": "名字",
+                    "varKey": "firstName",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "18",
+                    "varDesc": "年龄",
+                    "varKey": "age",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "标记",
+                    "varKey": "flagged",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "false",
+                    "varDesc": "是否为学生",
+                    "varKey": "isStudent",
+                    "varType": "Boolean"
+                  },
+                  {
+                    "testValue": "A",
+                    "varDesc": "级别",
+                    "varKey": "rank",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "2",
+                    "varDesc": "票数",
+                    "varKey": "tickets",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "true",
+                    "varDesc": "approved",
+                    "varKey": "approved",
+                    "varType": "Boolean"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items3",
+                "varType": "Object"
+              }
+            ],
+            "varDesc": "驾驶员列表",
+            "varKey": "drivers",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "BYD",
+                    "varDesc": "生产",
+                    "varKey": "make",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "2022",
+                    "varDesc": "年份",
+                    "varKey": "year",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "scott",
+                    "varDesc": "主驾驶员",
+                    "varKey": "mainDriver",
+                    "varType": "String"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "HONDA",
+                    "varDesc": "生产",
+                    "varKey": "make",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "1999",
+                    "varDesc": "年份",
+                    "varKey": "year",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "tianxi",
+                    "varDesc": "主驾驶员",
+                    "varKey": "mainDriver",
+                    "varType": "String"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items1",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "BMW",
+                    "varDesc": "生产",
+                    "varKey": "make",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "2010",
+                    "varDesc": "年份",
+                    "varKey": "year",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "yuliangliang",
+                    "varDesc": "主驾驶员",
+                    "varKey": "mainDriver",
+                    "varType": "String"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items2",
+                "varType": "Object"
+              },
+              {
+                "childTestDocumentVariableList": [
+                  {
+                    "testValue": "AUDI",
+                    "varDesc": "生产",
+                    "varKey": "make",
+                    "varType": "String"
+                  },
+                  {
+                    "testValue": "2019",
+                    "varDesc": "年份",
+                    "varKey": "year",
+                    "varType": "Integer"
+                  },
+                  {
+                    "testValue": "tianxiPlus",
+                    "varDesc": "主驾驶员",
+                    "varKey": "mainDriver",
+                    "varType": "String"
+                  }
+                ],
+                "varDesc": "items",
+                "varKey": "items3",
+                "varType": "Object"
+              }
+            ],
+            "varDesc": "车库",
+            "varKey": "vehicles",
+            "varType": "Array"
+          }
+        ],
+        "inner": [],
+        "output": [
+          {
+            "varDesc": "any",
+            "varKey": "decisionAny",
+            "varType": "String"
+          },
+          {
+            "varDesc": "count",
+            "varKey": "decisionCount",
+            "varType": "String"
+          },
+          {
+            "varDesc": "sum",
+            "varKey": "decisionSum",
+            "varType": "String"
+          },
+          {
+            "varDesc": "average",
+            "varKey": "decisionAverage",
+            "varType": "String"
+          },
+          {
+            "varDesc": "min",
+            "varKey": "decisionMin",
+            "varType": "String"
+          },
+          {
+            "varDesc": "max",
+            "varKey": "decisionMax",
+            "varType": "String"
+          },
+          {
+            "varDesc": "last",
+            "varKey": "decisionLast",
+            "varType": "String"
+          },
+          {
+            "varDesc": "first",
+            "varKey": "decisionFirst",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "distinct",
+            "varKey": "decisionDistinct",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "toArray",
+            "varKey": "decisionToArray",
+            "varType": "Array"
+          },
+          {
+            "varDesc": "orderby1",
+            "varKey": "decisionOrderby1",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "orderby2",
+            "varKey": "decisionOrderby2",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "orderby3",
+            "varKey": "decisionOrderby3",
+            "varType": "Array"
+          },
+          {
+            "varDesc": "let1",
+            "varKey": "decisionLet1",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "let2",
+            "varKey": "decisionLet2",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "join1",
+            "varKey": "decisionJoin1",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "groupby",
+            "varKey": "decisionGroupby",
+            "varType": "Array"
+          },
+          {
+            "varDesc": "select",
+            "varKey": "decisionSelect",
+            "varType": "String"
+          },
+          {
+            "varDesc": "decisionFirst1",
+            "varKey": "decisionFirst1",
+            "varType": "String"
+          },
+          {
+            "varDesc": "decisionLast1",
+            "varKey": "decisionLast1",
+            "varType": "String"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "decisionKey": "JC-202303130001",
+  "version": "1",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "root-start",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": "",
+        "action": ""
+      },
+      {
+        "nodeName": "决策规则",
+        "nodeKey": "7b575fb3-6180-4450-b0c3-7a0e4510f16d",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "pid": "",
+            "rulesetKey": "48b7180a-bdd6-4914-9636-d57a6cb1b1bc",
+            "id": "48b7180a-bdd6-4914-9636-d57a6cb1b1bc",
+            "addId": "48b7180a-bdd6-4914-9636-d57a6cb1b1bc",
+            "status": 1,
+            "condition": "",
+            "defaultAction": "",
+            "ruleList": [
+              {
+                "pid": "48b7180a-bdd6-4914-9636-d57a6cb1b1bc",
+                "id": "6b5da428-1b94-45d9-88fd-900be35d82d5",
+                "ruleKey": "6b5da428-1b94-45d9-88fd-900be35d82d5",
+                "status": 1,
+                "condition": "true",
+                "action": "OUTPUT.score2 = INPUT.score;",
+                "elseAction": "",
+                "guard": "",
+                "ruleName": 1
+              }
+            ],
+            "rulesetName": 1,
+            "executionMode": "ALL"
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": "",
+        "action": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "root-start",
+        "targetNodeKey": "7b575fb3-6180-4450-b0c3-7a0e4510f16d",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "inner": [
+      {
+        "desensitizationFlag": "AUTO",
+        "level": 1,
+        "monitorFlag": false,
+        "required": true,
+        "varDesc": "分数1",
+        "varKey": "score1",
+        "varSource": "CONTEXT",
+        "varType": "String"
+      }
+    ],
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "level": 1,
+        "monitorFlag": false,
+        "required": true,
+        "varDesc": "分数",
+        "varKey": "score",
+        "varSource": "CONTEXT",
+        "varType": "String"
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "level": 1,
+        "monitorFlag": false,
+        "required": true,
+        "varDesc": "分数2",
+        "varKey": "score2",
+        "varSource": "CONTEXT",
+        "varType": "String"
+      }
+    ]
+  }
+}

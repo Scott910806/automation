@@ -1,0 +1,801 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "7",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "ba3b9c84-e67e-4156-9569-e076f8979422",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "HEEL",
+        "nodeKey": "0552bb5a-5383-421d-8051-55e22e0100e3",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "age45 = true",
+                "condition": "age == 45",
+                "elseAction": "",
+                "ruleKey": "rule_ozknwwnq",
+                "ruleName": "operator ==",
+                "status": 1
+              },
+              {
+                "action": "age45 = false",
+                "condition": "age != 45",
+                "ruleKey": "rule_nefxcwqt",
+                "ruleName": "operator !=",
+                "status": 1
+              },
+              {
+                "action": "age44Plus = true",
+                "condition": "age > 44",
+                "ruleKey": "rule_vrycimus",
+                "ruleName": "operator >",
+                "status": 1
+              },
+              {
+                "action": "age46Mins = true",
+                "condition": "age < 46",
+                "ruleKey": "rule_uratjfdb",
+                "ruleName": "operator <",
+                "status": 1
+              },
+              {
+                "action": "age46Mins = true",
+                "condition": "age <= 46",
+                "ruleKey": "rule_kvyebtvq",
+                "ruleName": "operator <=",
+                "status": 1
+              },
+              {
+                "action": "ageBetween40And50 = true",
+                "condition": "age >=40 && age <=50",
+                "ruleKey": "rule_jytggdgu",
+                "ruleName": "&&",
+                "status": 1
+              },
+              {
+                "action": "age18MinsOr60Plus = true",
+                "condition": "age <=18 || age >=60",
+                "ruleKey": "rule_qmibqvjz",
+                "ruleName": "||",
+                "status": 1
+              },
+              {
+                "action": "ageBetween40And50 = true",
+                "condition": "age >=40 and age <=50",
+                "ruleKey": "rule_zyivizuz",
+                "ruleName": "and",
+                "status": 1
+              },
+              {
+                "action": "age18MinsOr60Plus = true",
+                "condition": "age <=18 or age >=60",
+                "ruleKey": "rule_kkpzhrgz",
+                "ruleName": "or",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_cbvaiprt",
+            "rulesetName": "simpleConditions",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "eligible = \"Eligible\"",
+                "condition": "state in [\n    \"AL\", \"AK\", \"AZ\", \"AR\", \n    \"CA\", \"CO\", \"CT\", \n    \"DC\", \"DE\", \n    \"FL\", \n    \"GA\", \n    \"HI\", \n    \"ID\", \"IL\", \"IN\", \"IA\", \n    \"KS\", \"KY\", \n    \"LA\", \n    \"ME\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MT\", \"NE\", \n    \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \n    \"OH\", \"OK\", \"OR\", \n    \"PA\", \n    \"RI\", \n    \"SC\", \"SD\", \n    \"TN\", \"TX\", \n    \"UT\", \n    \"VT\", \"VA\", \n    \"WA\", \"WV\", \"WI\", \"WY\"]",
+                "elseAction": "",
+                "ruleKey": "rule_yyuakoyt",
+                "ruleName": "eligibility",
+                "status": 1
+              },
+              {
+                "action": "invaildFields.Append(previousState)",
+                "condition": "previousState not in [\n    \"AL\", \"AK\", \"AZ\", \"AR\", \n    \"CA\", \"CO\", \"CT\", \n    \"DC\", \"DE\", \n    \"FL\", \n    \"GA\", \n    \"HI\", \n    \"ID\", \"IL\", \"IN\", \"IA\", \n    \"KS\", \"KY\", \n    \"LA\", \n    \"ME\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MT\", \"NE\", \n    \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \n    \"OH\", \"OK\", \"OR\", \n    \"PA\", \n    \"RI\", \n    \"SC\", \"SD\", \n    \"TN\", \"TX\", \n    \"UT\", \n    \"VT\", \"VA\", \n    \"WA\", \"WV\", \"WI\", \"WY\"]",
+                "ruleKey": "rule_mejefkai",
+                "ruleName": "badState",
+                "status": 1
+              },
+              {
+                "action": "ageCategory = \"Young\"",
+                "condition": "age in 18 .. 25",
+                "ruleKey": "rule_aerzsftt",
+                "ruleName": "young",
+                "status": 1
+              },
+              {
+                "action": "ageCategory = \"Still young\"",
+                "condition": "age in 25 >.. 45",
+                "ruleKey": "rule_edffldbt",
+                "ruleName": "youngExcluding25",
+                "status": 1
+              },
+              {
+                "action": "ageCategory = \"Young forever\"",
+                "condition": "age in 45 ..< 65",
+                "ruleKey": "rule_ophyuxnb",
+                "ruleName": "youngExcluding65",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_jrdeqmlb",
+            "rulesetName": "in",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "ageCheck = true",
+                "condition": "age + 5 == 50",
+                "elseAction": "",
+                "ruleKey": "rule_mfohruxj",
+                "ruleName": "math+",
+                "status": 1
+              },
+              {
+                "action": "ageCheck = true",
+                "condition": "age-5 == 40",
+                "ruleKey": "rule_iyxdsndh",
+                "ruleName": "math-",
+                "status": 1
+              },
+              {
+                "action": "ageCheck = true",
+                "condition": "age * 2 == 90",
+                "ruleKey": "rule_wlenanrr",
+                "ruleName": "math*",
+                "status": 1
+              },
+              {
+                "action": "ageCheck = true",
+                "condition": "age / 5 == 9",
+                "ruleKey": "rule_dgrmmhts",
+                "ruleName": "math-",
+                "status": 1
+              },
+              {
+                "action": "isRoundPrice = true",
+                "condition": "price % 10 == 0",
+                "ruleKey": "rule_eslidqhy",
+                "ruleName": "math%",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_bscswrys",
+            "rulesetName": "math",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "assignVariable = 5",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_ryvupklu",
+                "ruleName": "=",
+                "status": 1
+              },
+              {
+                "action": "assignVariable += 20",
+                "condition": "true",
+                "ruleKey": "rule_epefedsk",
+                "ruleName": "+=",
+                "status": 1
+              },
+              {
+                "action": "assignVariable -= 10",
+                "condition": "true",
+                "ruleKey": "rule_jpgcucje",
+                "ruleName": "-=",
+                "status": 1
+              },
+              {
+                "action": "assignVariable *= 100",
+                "condition": "true",
+                "ruleKey": "rule_ejhbdsbk",
+                "ruleName": "*=",
+                "status": 1
+              },
+              {
+                "action": "assignVariable /= 10",
+                "condition": "true",
+                "ruleKey": "rule_hggpnqlz",
+                "ruleName": "/=",
+                "status": 1
+              },
+              {
+                "action": "assignVariable++ ",
+                "condition": "true",
+                "ruleKey": "rule_zuyejhuz",
+                "ruleName": "++",
+                "status": 1
+              },
+              {
+                "action": "assignVariable--",
+                "condition": "true",
+                "ruleKey": "rule_szvufebc",
+                "ruleName": "--",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_ybtcixrm",
+            "rulesetName": "assignments",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "invaildFields.Append(city)",
+                "condition": "IsMatch(city, \"\\\\s{2}\")",
+                "elseAction": "",
+                "ruleKey": "rule_udenioym",
+                "ruleName": "cityFormat",
+                "status": 1
+              },
+              {
+                "action": "invaildFields.Append(email)",
+                "condition": "not IsMatch(email, \"^[a-zA-Z0-9]+@[a-zA-Z0-9_]+\\\\.[a-zA-Z]{2,}$\")",
+                "ruleKey": "rule_bcoszxky",
+                "ruleName": "emailFormat",
+                "status": 1
+              },
+              {
+                "action": "isEmergency = true",
+                "condition": "Split(phoneNumber, \"-\")[0] == \"911\"",
+                "ruleKey": "rule_gvreytug",
+                "ruleName": "areaCode",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_torshqdn",
+            "rulesetName": "regularExpression",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "simpleFormat = \"Hello, \" + name",
+                "condition": "name != \"\"",
+                "elseAction": "",
+                "ruleKey": "rule_spppvlsf",
+                "ruleName": "simpleFormat",
+                "status": 1
+              },
+              {
+                "action": "betterFormat = Format(\"Hello, {0}. How are you, {1}\", name, name)",
+                "condition": "name != \"\"",
+                "ruleKey": "rule_bulftssn",
+                "ruleName": "betterFormat",
+                "status": 1
+              },
+              {
+                "action": "description = \"The cost is $\" + cost",
+                "condition": "cost > 0",
+                "ruleKey": "rule_ifdotaen",
+                "ruleName": "numericFormat",
+                "status": 1
+              },
+              {
+                "action": "betterDescription = Format(\"The cost is {0}\", cost) ",
+                "condition": "cost > 0",
+                "ruleKey": "rule_ialfupnv",
+                "ruleName": "betterNumericFormat",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_axdwzgov",
+            "rulesetName": "format",
+            "status": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_slolzuyf",
+            "ruleList": [
+              {
+                "action": "lastInvaildField = (invaildFields.Count() > 0 ? invaildFields.Last() : \"empty collection\");\nfirstInvaildField = (invaildFields.Any() ? invaildFields[0] : \"empty collection\")",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_fwlgayqz",
+                "ruleName": "addtional1",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_wyuujuzb",
+            "rulesetName": "additional",
+            "status": 1
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "ba3b9c84-e67e-4156-9569-e076f8979422",
+        "targetNodeKey": "0552bb5a-5383-421d-8051-55e22e0100e3",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "name",
+        "varKey": "name",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "name"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "state",
+        "varKey": "state",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "state"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": true,
+        "varDesc": "previousState",
+        "varKey": "previousState",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "previousState"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": true,
+        "varDesc": "grade",
+        "varKey": "grade",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "grade"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": true,
+        "varDesc": "phoneNumber",
+        "varKey": "phoneNumber",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "phoneNumber"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": true,
+        "varDesc": "city",
+        "varKey": "city",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "city"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": true,
+        "varDesc": "email",
+        "varKey": "email",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "email"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": true,
+        "varDesc": "numeric",
+        "varKey": "numeric",
+        "varSource": "CONTEXT",
+        "varType": "Object",
+        "path": "numeric",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": true,
+            "varDesc": "cost",
+            "varKey": "cost",
+            "varSource": "DEFAULT",
+            "varType": "Double",
+            "path": "numeric.cost"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": true,
+            "varDesc": "age",
+            "varKey": "age",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "numeric.age"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": true,
+            "varDesc": "price",
+            "varKey": "price",
+            "varSource": "DEFAULT",
+            "varType": "Double",
+            "path": "numeric.price"
+          }
+        ]
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "simpleExamples",
+        "varKey": "simpleExamples",
+        "varSource": "DEFAULT",
+        "varType": "Object",
+        "path": "simpleExamples",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": false,
+            "varDesc": "simpleFormat",
+            "varKey": "simpleFormat",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.simpleFormat"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": false,
+            "varDesc": "betterFormat",
+            "varKey": "betterFormat",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.betterFormat"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": false,
+            "varDesc": "gradeCategory",
+            "varKey": "gradeCategory",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.gradeCategory"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 4,
+            "required": false,
+            "varDesc": "eligible",
+            "varKey": "eligible",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.eligible"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 5,
+            "required": false,
+            "varDesc": "isEmergency",
+            "varKey": "isEmergency",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "simpleExamples.isEmergency"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 6,
+            "required": false,
+            "varDesc": "invaildFields",
+            "varKey": "invaildFields",
+            "varSource": "DEFAULT",
+            "varType": "Array",
+            "subVarType": "String",
+            "path": "simpleExamples.invaildFields",
+            "childVariableList": []
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 7,
+            "required": false,
+            "varDesc": "lastInvaildField",
+            "varKey": "lastInvaildField",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.lastInvaildField"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 8,
+            "required": false,
+            "varDesc": "firstInvaildField",
+            "varKey": "firstInvaildField",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "simpleExamples.firstInvaildField"
+          }
+        ]
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "numericExamples",
+        "varKey": "numericalExamples",
+        "varSource": "DEFAULT",
+        "varType": "Object",
+        "path": "numericalExamples",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": false,
+            "varDesc": "description",
+            "varKey": "description",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "numericalExamples.description"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": false,
+            "varDesc": "betterDescription",
+            "varKey": "betterDescription",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "numericalExamples.betterDescription"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": false,
+            "varDesc": "isRoundPrice",
+            "varKey": "isRoundPrice",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.isRoundPrice"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 4,
+            "required": false,
+            "varDesc": "assignVariable",
+            "varKey": "assignVariable",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "numericalExamples.assignVariable"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 5,
+            "required": false,
+            "varDesc": "age45",
+            "varKey": "age45",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.age45"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 6,
+            "required": false,
+            "varDesc": "age44Plus",
+            "varKey": "age44Plus",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.age44Plus"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 7,
+            "required": false,
+            "varDesc": "age46Mins",
+            "varKey": "age46Mins",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.age46Mins"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 8,
+            "required": false,
+            "varDesc": "ageCheck",
+            "varKey": "ageCheck",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.ageCheck"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 9,
+            "required": false,
+            "varDesc": "ageCategory",
+            "varKey": "ageCategory",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "numericalExamples.ageCategory"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 10,
+            "required": false,
+            "varDesc": "ageBetween40And50",
+            "varKey": "ageBetween40And50",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.ageBetween40And50"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 11,
+            "required": false,
+            "varDesc": "age18MinsOr60Plus",
+            "varKey": "age18MinsOr60Plus",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "numericalExamples.age18MinsOr60Plus"
+          }
+        ]
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

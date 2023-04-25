@@ -1,0 +1,347 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "1",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "c91767c0-b0dc-4c2a-85d1-cc08e8664f63",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "built-ins",
+        "nodeKey": "8bfe9e3c-9521-4bc9-b6c2-a77980316a1b",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_hpbimuio",
+            "ruleList": [
+              {
+                "action": "subStringValue = str.Substring(1,2);\nstrLength = str.Length;\nstrUpper = str.ToUpper();\nstrLower = str.ToLower()",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_ekutriay",
+                "ruleName": "1",
+                "status": 1
+              },
+              {
+                "action": "isStrStartsWith = str.StartsWith(\"he\");\nisStrEndsWith = str.EndsWith(\"ord\");\nisStrContains = str.Contains(\"hello\")",
+                "condition": "true",
+                "ruleKey": "rule_dumgbmdk",
+                "ruleName": "2",
+                "status": 1
+              },
+              {
+                "action": "strTrim = str1.Trim();\nstrFormat = Format(\"welcome, {0}. The time is {1}. \" , str2, Now());",
+                "condition": "true",
+                "ruleKey": "rule_hmmprhkp",
+                "ruleName": "format",
+                "status": 1
+              },
+              {
+                "action": "isStrMatch = IsMatch(telphoneNum, \"^0\\\\d{2,3}-\\\\d{7,8}$\");\nstrReplace = Replace(\"HEngine       is the  \\t\\t best   \", \"\\\\s+\", \" \");\nstrSplit = Split(\"we,  are;;  second ;  to     none\", \"[\\\\,\\\\;\\\\s]+\");",
+                "condition": "true",
+                "ruleKey": "rule_otbnvlzg",
+                "ruleName": "regex",
+                "status": 1
+              },
+              {
+                "action": "strJion = StringJoin(\"$$\", strList );",
+                "condition": "true",
+                "ruleKey": "rule_kkuiclhp",
+                "ruleName": "split&jion",
+                "status": 1
+              }
+            ],
+            "rulesetKey": "ruleset_fonmavxy",
+            "rulesetName": "Samples",
+            "status": 1
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "c91767c0-b0dc-4c2a-85d1-cc08e8664f63",
+        "targetNodeKey": "8bfe9e3c-9521-4bc9-b6c2-a77980316a1b",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "字符串",
+        "varKey": "str",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "str"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "字符串1",
+        "varKey": "str1",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "str1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": true,
+        "varDesc": "字符串2",
+        "varKey": "str2",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "str2"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": true,
+        "varDesc": "电话号码",
+        "varKey": "telphoneNum",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "telphoneNum"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": true,
+        "varDesc": "邮箱",
+        "varKey": "email",
+        "varSource": "CONTEXT",
+        "varType": "String",
+        "path": "email"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": true,
+        "varDesc": "字符串里诶博爱",
+        "varKey": "strList",
+        "varSource": "CONTEXT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "strList",
+        "childVariableList": []
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "子串",
+        "varKey": "subStringValue",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "subStringValue"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "字符串长度",
+        "varKey": "strLength",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "strLength"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "大写",
+        "varKey": "strUpper",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strUpper"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "小写",
+        "varKey": "strLower",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strLower"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "以xx开始",
+        "varKey": "isStrStartsWith",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "isStrStartsWith"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "以xx结束",
+        "varKey": "isStrEndsWith",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "isStrEndsWith"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "是否包含",
+        "varKey": "isStrContains",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "isStrContains"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "去除首尾空字符",
+        "varKey": "strTrim",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strTrim"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "格式化",
+        "varKey": "strFormat",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strFormat"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "正则匹配",
+        "varKey": "isStrMatch",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "isStrMatch"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "正则替换",
+        "varKey": "strReplace",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strReplace"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "拼接",
+        "varKey": "strJion",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "strJion"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 13,
+        "required": false,
+        "varDesc": "分割",
+        "varKey": "strSplit",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "strSplit",
+        "childVariableList": []
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

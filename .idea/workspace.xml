@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2093fe5-8a77-466f-8e25-aa0f6a93f216" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cases/StringBuiltInsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cases/TranslateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/demo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/document.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_collections.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_number.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_type_check_and_conversion.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/heel_for_LINQ.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/heel_samples.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_collections.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_number.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_type_check_and_conversion.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/heel_for_LINQ.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/heel_samples.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/simpleHeel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mytools/HEstrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mytools/MyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DemoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MB8T9sjxLbWAluUiOU1XMaNgkA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/admin/Desktop/hengine/automation/src/test/resources",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="mytools" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RunTest.heel_samples_run">
+    <configuration name="RunTest.built_ins_for_type_check_and_conversion_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
+      <option name="METHOD_NAME" value="built_ins_for_type_check_and_conversion_run" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunTest.heel_for_LINQ_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
+      <option name="METHOD_NAME" value="heel_for_LINQ_run" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunTest.heel_samples_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
+      <option name="METHOD_NAME" value="heel_samples_run" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslateTest.translate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.TranslateTest" />
+      <option name="METHOD_NAME" value="translate(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:cases.TranslateTest]/[test-template:translate(java.lang.String)]/[test-template-invocation:#5]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslateTest.translate.[5] src/test/java/data/save/built_ins_for_type_check_and_conversion.json" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cases" />
+      <option name="MAIN_CLASS_NAME" value="cases.TranslateTest" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:cases.TranslateTest]/[test-template:translate(java.lang.String)]/[test-template-invocation:#5]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RunTest.heel_samples_run" />
+        <item itemvalue="JUnit.TranslateTest.translate" />
+        <item itemvalue="JUnit.RunTest.heel_for_LINQ_run" />
+        <item itemvalue="JUnit.RunTest.built_ins_for_type_check_and_conversion_run" />
+        <item itemvalue="JUnit.TranslateTest.translate.[5] src/test/java/data/save/built_ins_for_type_check_and_conversion.json" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2093fe5-8a77-466f-8e25-aa0f6a93f216" name="Changes" comment="" />
+      <created>1677229621601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677229621601</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

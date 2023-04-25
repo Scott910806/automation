@@ -1,0 +1,103 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "5",
+  "testDataList": [
+    {
+      "documentId": 169,
+      "documentName": "测试文档4",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "5",
+      "testDocumentVariableSummaryVo": {
+        "inner": [],
+        "input": [
+          {
+            "testValue": "66",
+            "varDesc": "integerVar",
+            "varKey": "integerVar",
+            "varType": "Integer"
+          },
+          {
+            "testValue": "3.567",
+            "varDesc": "doubleVar",
+            "varKey": "doubleVar",
+            "varType": "Double"
+          },
+          {
+            "testValue": "8.976543",
+            "varDesc": "decimalVar1",
+            "varKey": "decimalVar1",
+            "varType": "Decimal"
+          },
+          {
+            "testValue": "1.234567",
+            "varDesc": "decimalVar1",
+            "varKey": "decimalVar2",
+            "varType": "Decimal"
+          }
+        ],
+        "output": [
+          {
+            "varDesc": "isInteger",
+            "varKey": "isInteger",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "isDouble",
+            "varKey": "isDouble",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "integerToString",
+            "varKey": "integerToString",
+            "varType": "String"
+          },
+          {
+            "varDesc": "toInteger",
+            "varKey": "toInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "toDouble",
+            "varKey": "toDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "toDecimal",
+            "varKey": "toDecimal",
+            "varType": "Decimal"
+          },
+          {
+            "varDesc": "doubleToString",
+            "varKey": "doubleToString",
+            "varType": "String"
+          },
+          {
+            "varDesc": "decimalCompare",
+            "varKey": "decimalCompare",
+            "varType": "String"
+          },
+          {
+            "varDesc": "decimalAdd",
+            "varKey": "decimalAdd",
+            "varType": "Decimal"
+          },
+          {
+            "varDesc": "decimalSub",
+            "varKey": "decimalSub",
+            "varType": "Decimal"
+          },
+          {
+            "varDesc": "decimalMul",
+            "varKey": "decimalMul",
+            "varType": "Decimal"
+          },
+          {
+            "varDesc": "decimalDiv",
+            "varKey": "decimalDiv",
+            "varType": "Decimal"
+          }
+        ]
+      }
+    }
+  ]
+}

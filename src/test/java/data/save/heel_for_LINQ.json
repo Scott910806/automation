@@ -1,0 +1,753 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "6",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "a3e188f2-f842-4549-841c-ab0a00fc4665",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "LINQ",
+        "nodeKey": "85c16c21-6dcb-4063-ba72-1cab20828216",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_dnayiqqi",
+            "ruleList": [
+              {
+                "action": "from d in drivers\nwhere d.tickets == 0\nupdate d.approved = true",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_lmpcncrc",
+                "ruleName": "update",
+                "status": 1,
+                "id": "rule_lmpcncrc",
+                "pid": "ruleset_qebnjumo",
+                "index": 0
+              },
+              {
+                "action": "from d in drivers\nwhere d.age < 18\nupdate{\nd.flagged = true;\nd.isStudent = true}",
+                "condition": "true",
+                "ruleKey": "rule_fcffrxvh",
+                "ruleName": "update1",
+                "status": 1,
+                "id": "rule_fcffrxvh",
+                "pid": "ruleset_qebnjumo",
+                "index": 1
+              }
+            ],
+            "rulesetKey": "ruleset_qebnjumo",
+            "rulesetName": "Patterns",
+            "status": 1,
+            "id": "ruleset_qebnjumo",
+            "index": 0
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_dnayiqqi",
+            "ruleList": [
+              {
+                "action": "decisionAny = \"At last one vehicle is newer\"",
+                "condition": "from v in vehicles\nwhere v.year > 2020\ncompute Any",
+                "elseAction": "",
+                "ruleKey": "rule_vyejfkmd",
+                "ruleName": "Any",
+                "status": 1,
+                "id": "rule_vyejfkmd",
+                "pid": "ruleset_kjoejqcv",
+                "index": 0
+              },
+              {
+                "action": "decisionAny = \"Not a single vehicle is newer\"",
+                "condition": "from v in vehicles\nwhere v.year > 2020\ncompute Any == false",
+                "ruleKey": "rule_vidamopa",
+                "ruleName": "AnyWithTest",
+                "status": 1,
+                "id": "rule_vidamopa",
+                "pid": "ruleset_kjoejqcv",
+                "index": 1
+              },
+              {
+                "action": "decisionCount = \"There are at least 3 vehicles in the policy\"",
+                "condition": "from v in vehicles\ncompute Count >= 3",
+                "ruleKey": "rule_zdwhehre",
+                "ruleName": "Count",
+                "status": 1,
+                "id": "rule_zdwhehre",
+                "pid": "ruleset_kjoejqcv",
+                "index": 2
+              },
+              {
+                "action": "decisionSum = \"There are more than 2 tickets in the policy\"",
+                "condition": "from d in drivers\ncompute Sum(d.tickets) > 2",
+                "ruleKey": "rule_mnbkvmvd",
+                "ruleName": "Sum",
+                "status": 1,
+                "id": "rule_mnbkvmvd",
+                "pid": "ruleset_kjoejqcv",
+                "index": 3
+              },
+              {
+                "action": "decisionAverage = \"The average year of the vehicles is less than 2018\"",
+                "condition": "from v in vehicles\ncompute Average(v.year) < 2018",
+                "ruleKey": "rule_ouhkifgl",
+                "ruleName": "Average",
+                "status": 1,
+                "id": "rule_ouhkifgl",
+                "pid": "ruleset_kjoejqcv",
+                "index": 4
+              },
+              {
+                "action": "decisionMin = \"The oldest vehicle is before 2015\"",
+                "condition": "vehicles.Any() and\nfrom v in vehicles\ncompute Min(v.year) <= 2015",
+                "ruleKey": "rule_ltxnzpgm",
+                "ruleName": "Min",
+                "status": 1,
+                "id": "rule_ltxnzpgm",
+                "pid": "ruleset_kjoejqcv",
+                "index": 5
+              },
+              {
+                "action": "decisionMax = \"The newest vehicle is after 2015\"",
+                "condition": "vehicles.Any() and\nfrom v in vehicles\ncompute Max(v.year) >= 2015",
+                "ruleKey": "rule_iloskmqo",
+                "ruleName": "Max",
+                "status": 1,
+                "id": "rule_iloskmqo",
+                "pid": "ruleset_kjoejqcv",
+                "index": 6
+              },
+              {
+                "action": "decisionFirst = \"The first driver is soctt\"",
+                "condition": "from d in drivers\nselect d. firstName\ncompute First == \"scott\"",
+                "ruleKey": "rule_qmluntku",
+                "ruleName": "First",
+                "status": 1,
+                "id": "rule_qmluntku",
+                "pid": "ruleset_kjoejqcv",
+                "index": 7
+              },
+              {
+                "action": "decisionFirst1 = \nfrom d in drivers\nselect d. firstName\ncompute First",
+                "condition": "true",
+                "ruleKey": "rule_jgtvtctn",
+                "ruleName": "First1",
+                "status": 1,
+                "id": "rule_jgtvtctn",
+                "pid": "ruleset_kjoejqcv",
+                "index": 8
+              },
+              {
+                "action": "decisionLast = \"The last driver is tianxi\"",
+                "condition": "from d in drivers\nselect d. firstName\ncompute Last == \"tianxi\"",
+                "ruleKey": "rule_kieoaxhf",
+                "ruleName": "Last",
+                "status": 1,
+                "id": "rule_kieoaxhf",
+                "pid": "ruleset_kjoejqcv",
+                "index": 9
+              },
+              {
+                "action": "decisionLast1 = \"The last driver is \" + \nfrom d in drivers\nselect d. firstName\ncompute Last",
+                "condition": "true",
+                "ruleKey": "rule_timqdmul",
+                "ruleName": "Last1",
+                "status": 1,
+                "id": "rule_timqdmul",
+                "pid": "ruleset_kjoejqcv",
+                "index": 10
+              }
+            ],
+            "rulesetKey": "ruleset_kjoejqcv",
+            "rulesetName": "AggregateFunctions",
+            "status": 1,
+            "id": "ruleset_kjoejqcv",
+            "index": 1
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_dnayiqqi",
+            "ruleList": [
+              {
+                "action": "decisionDistinct = from d in drivers\nselect d.firstName\ncompute Distinct",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_cnkfnfzo",
+                "ruleName": "Distinct",
+                "status": 1,
+                "id": "rule_cnkfnfzo",
+                "pid": "ruleset_qghrhiak",
+                "index": 0
+              },
+              {
+                "action": "decisionToArray = from d in drivers\nselect d.firstName\ncompute ToArray",
+                "condition": "true",
+                "ruleKey": "rule_dzcmhoks",
+                "ruleName": "ToArray",
+                "status": 1,
+                "id": "rule_dzcmhoks",
+                "pid": "ruleset_qghrhiak",
+                "index": 1
+              },
+              {
+                "action": "decisionOrderby1 = from d in drivers\norderby d.age ascending\nselect d.firstName\ncompute First",
+                "condition": "true",
+                "ruleKey": "rule_lqngugrj",
+                "ruleName": "Orderby1",
+                "status": 1,
+                "id": "rule_lqngugrj",
+                "pid": "ruleset_qghrhiak",
+                "index": 2
+              },
+              {
+                "action": "decisionOrderby2.Append(d.firstName)",
+                "condition": "from d in drivers\norderby d.age descending",
+                "ruleKey": "rule_mrswqscs",
+                "ruleName": "Orderby2",
+                "status": 1,
+                "id": "rule_mrswqscs",
+                "pid": "ruleset_qghrhiak",
+                "index": 3
+              },
+              {
+                "action": "decisionOrderby3.Append(d.firstName)",
+                "condition": "from d in drivers\norderby d.age ascending, d.tickets descending",
+                "ruleKey": "rule_vsagkmip",
+                "ruleName": "Orderby3",
+                "status": 1,
+                "id": "rule_vsagkmip",
+                "pid": "ruleset_qghrhiak",
+                "index": 4
+              },
+              {
+                "action": "decisionSelect = \"Average is \" + \nfrom d in drivers\nselect d.age\ncompute Average",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_urnewnsg",
+                "ruleName": "Select",
+                "status": 1,
+                "id": "rule_urnewnsg",
+                "pid": "ruleset_qghrhiak",
+                "index": 5
+              },
+              {
+                "action": "decisionLet1 = \"Average age is over 20, and it is \" + x;",
+                "condition": "from i in 1..1\nlet x = (from d in drivers\ncompute Average(d.age))\nwhere x != null and x > 20",
+                "ruleKey": "rule_xiykaqwy",
+                "ruleName": "Let1",
+                "status": 1,
+                "id": "rule_xiykaqwy",
+                "pid": "ruleset_qghrhiak",
+                "index": 6
+              },
+              {
+                "action": "decisionLet2.Append(n)",
+                "condition": "from i in 0 ..< drivers.Count()\nlet n = drivers[i].firstName",
+                "ruleKey": "rule_zhzmyfjv",
+                "ruleName": "Let2",
+                "status": 1,
+                "id": "rule_zhzmyfjv",
+                "pid": "ruleset_qghrhiak",
+                "index": 7
+              },
+              {
+                "action": "decisionJoin1.Append(d.firstName + \" drives \" + v.make + \" \" + v.year)",
+                "condition": "from d in drivers\njoin v in vehicles on d.firstName equals v.mainDriver",
+                "ruleKey": "rule_ozgwripl",
+                "ruleName": "Join",
+                "status": 1,
+                "id": "rule_ozgwripl",
+                "pid": "ruleset_qghrhiak",
+                "index": 8
+              }
+            ],
+            "rulesetKey": "ruleset_qghrhiak",
+            "rulesetName": "Advanced",
+            "status": 1,
+            "id": "ruleset_qghrhiak",
+            "index": 2
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "a3e188f2-f842-4549-841c-ab0a00fc4665",
+        "targetNodeKey": "85c16c21-6dcb-4063-ba72-1cab20828216",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "defaultValue": "[]",
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [
+          "D#580"
+        ],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "驾驶员列表",
+        "varKey": "drivers",
+        "varSource": "CONTEXT",
+        "varType": "Array",
+        "subVarType": "Object",
+        "path": "drivers",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": true,
+            "varDesc": "名字",
+            "varKey": "firstName",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "drivers.firstName"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": true,
+            "varDesc": "年龄",
+            "varKey": "age",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "drivers.age"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": false,
+            "varDesc": "标记",
+            "varKey": "flagged",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "drivers.flagged"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 4,
+            "required": false,
+            "varDesc": "是否为学生",
+            "varKey": "isStudent",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "drivers.isStudent"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 5,
+            "required": true,
+            "varDesc": "级别",
+            "varKey": "rank",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "drivers.rank"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 6,
+            "required": true,
+            "varDesc": "票数",
+            "varKey": "tickets",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "drivers.tickets"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 7,
+            "required": false,
+            "varDesc": "approved",
+            "varKey": "approved",
+            "varSource": "DEFAULT",
+            "varType": "Boolean",
+            "path": "drivers.approved"
+          }
+        ]
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "车库",
+        "varKey": "vehicles",
+        "varSource": "CONTEXT",
+        "varType": "Array",
+        "subVarType": "Object",
+        "path": "vehicles",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": true,
+            "varDesc": "生产",
+            "varKey": "make",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "vehicles.make"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": true,
+            "varDesc": "年份",
+            "varKey": "year",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "vehicles.year"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 3,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": true,
+            "varDesc": "主驾驶员",
+            "varKey": "mainDriver",
+            "varSource": "DEFAULT",
+            "varType": "String",
+            "path": "vehicles.mainDriver"
+          }
+        ]
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "any",
+        "varKey": "decisionAny",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionAny"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "count",
+        "varKey": "decisionCount",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionCount"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "sum",
+        "varKey": "decisionSum",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionSum"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "average",
+        "varKey": "decisionAverage",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionAverage"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "min",
+        "varKey": "decisionMin",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionMin"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "max",
+        "varKey": "decisionMax",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionMax"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "last",
+        "varKey": "decisionLast",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionLast"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "first",
+        "varKey": "decisionFirst",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionFirst"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "distinct",
+        "varKey": "decisionDistinct",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionDistinct",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "toArray",
+        "varKey": "decisionToArray",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionToArray",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "orderby1",
+        "varKey": "decisionOrderby1",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionOrderby1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "orderby2",
+        "varKey": "decisionOrderby2",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionOrderby2",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 13,
+        "required": false,
+        "varDesc": "orderby3",
+        "varKey": "decisionOrderby3",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionOrderby3",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 14,
+        "required": false,
+        "varDesc": "let1",
+        "varKey": "decisionLet1",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionLet1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 15,
+        "required": false,
+        "varDesc": "let2",
+        "varKey": "decisionLet2",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionLet2",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 16,
+        "required": false,
+        "varDesc": "join1",
+        "varKey": "decisionJoin1",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionJoin1",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 17,
+        "required": false,
+        "varDesc": "groupby",
+        "varKey": "decisionGroupby",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "decisionGroupby",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 18,
+        "required": false,
+        "varDesc": "select",
+        "varKey": "decisionSelect",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionSelect"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 19,
+        "required": false,
+        "varDesc": "decisionFirst1",
+        "varKey": "decisionFirst1",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionFirst1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 20,
+        "required": false,
+        "varDesc": "decisionLast1",
+        "varKey": "decisionLast1",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "decisionLast1"
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

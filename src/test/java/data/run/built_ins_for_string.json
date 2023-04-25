@@ -1,0 +1,152 @@
+{
+  "decisionKey": "JC-202303220001",
+  "decisionVersion": "1",
+  "testDataList": [
+    {
+      "documentId": 115,
+      "documentName": "测试文档1",
+      "decisionKey": "JC-202303220001",
+      "decisionVersion": "1",
+      "testDocumentVariableSummaryVo": {
+        "inner": [],
+        "input": [
+          {
+            "testValue": "hello world",
+            "varDesc": "字符串",
+            "varKey": "str",
+            "varType": "String"
+          },
+          {
+            "testValue": "   shuhe    test   ",
+            "varDesc": "字符串1",
+            "varKey": "str1",
+            "varType": "String"
+          },
+          {
+            "testValue": "scott",
+            "varDesc": "字符串2",
+            "varKey": "str2",
+            "varType": "String"
+          },
+          {
+            "testValue": "0371-09876544",
+            "varDesc": "电话号码",
+            "varKey": "telphoneNum",
+            "varType": "String"
+          },
+          {
+            "testValue": "yxma.shuhe.com",
+            "varDesc": "邮箱",
+            "varKey": "email",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "testValue": "we",
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              },
+              {
+                "testValue": "are",
+                "varDesc": "items",
+                "varKey": "items1",
+                "varType": "String"
+              },
+              {
+                "testValue": "the",
+                "varDesc": "items",
+                "varKey": "items2",
+                "varType": "String"
+              },
+              {
+                "testValue": "best",
+                "varDesc": "items",
+                "varKey": "items3",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "字符串里诶博爱",
+            "varKey": "strList",
+            "varType": "Array"
+          }
+        ],
+        "output": [
+          {
+            "varDesc": "子串",
+            "varKey": "subStringValue",
+            "varType": "String"
+          },
+          {
+            "varDesc": "字符串长度",
+            "varKey": "strLength",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "大写",
+            "varKey": "strUpper",
+            "varType": "String"
+          },
+          {
+            "varDesc": "小写",
+            "varKey": "strLower",
+            "varType": "String"
+          },
+          {
+            "varDesc": "以xx开始",
+            "varKey": "isStrStartsWith",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "以xx结束",
+            "varKey": "isStrEndsWith",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "是否包含",
+            "varKey": "isStrContains",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "去除首尾空字符",
+            "varKey": "strTrim",
+            "varType": "String"
+          },
+          {
+            "varDesc": "格式化",
+            "varKey": "strFormat",
+            "varType": "String"
+          },
+          {
+            "varDesc": "正则匹配",
+            "varKey": "isStrMatch",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "正则替换",
+            "varKey": "strReplace",
+            "varType": "String"
+          },
+          {
+            "varDesc": "拼接",
+            "varKey": "strJion",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "分割",
+            "varKey": "strSplit",
+            "varType": "Array"
+          }
+        ]
+      }
+    }
+  ]
+}

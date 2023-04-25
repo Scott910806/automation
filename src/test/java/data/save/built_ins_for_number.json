@@ -1,0 +1,429 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "3",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "9c9eb07a-8079-442d-8345-608cf4cc1ea5",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "决策规则",
+        "nodeKey": "d1169223-c3b5-4fe9-955c-c37db7420d5a",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_vwkbbvhk",
+            "ruleList": [
+              {
+                "action": "absInteger = Abs(intVar1);\nabsFloat = Abs(-3.14f);\nabsDouble = Abs(-5.34)",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_zkwjlmgk",
+                "ruleName": "abs",
+                "status": 1,
+                "id": "rule_zkwjlmgk",
+                "pid": "ruleset_jbxbueay",
+                "index": 0
+              },
+              {
+                "action": "ceilDouble = Ceiling(3.22);\nceilDouble = Ceiling(4.56789);\nfloorDouble = Floor(3.22);\nfloorDouble = Floor(4.56789);",
+                "condition": "true",
+                "ruleKey": "rule_ecltnycl",
+                "ruleName": "cell&floor",
+                "status": 1,
+                "id": "rule_ecltnycl",
+                "pid": "ruleset_jbxbueay",
+                "index": 1
+              },
+              {
+                "action": "logDouble = Log(5);\nlog10Double = Log10(1000);\nlogBaseDouble = Log(9, 3);",
+                "condition": "true",
+                "ruleKey": "rule_oeydhmki",
+                "ruleName": "log",
+                "status": 1,
+                "id": "rule_oeydhmki",
+                "pid": "ruleset_jbxbueay",
+                "index": 2
+              },
+              {
+                "action": "maxInteger = Max(20,45);\nmaxFloat = Max(-1.65f, 0.34f);\nmaxDouble = Max(3.14, 8.88);\nminInteger = Min(20, 45);\nminFloat = Min(-1.65f, 0.34f);\nminDouble = Min(3.14, 8.88)",
+                "condition": "true",
+                "ruleKey": "rule_tbuxfuca",
+                "ruleName": "max&min",
+                "status": 1,
+                "id": "rule_tbuxfuca",
+                "pid": "ruleset_jbxbueay",
+                "index": 3
+              },
+              {
+                "action": "powDouble = Pow(2, 4);\npowDouble = Pow(10,3)",
+                "condition": "true",
+                "ruleKey": "rule_rorpwvxd",
+                "ruleName": "pow",
+                "status": 1,
+                "id": "rule_rorpwvxd",
+                "pid": "ruleset_jbxbueay",
+                "index": 4
+              },
+              {
+                "action": "roundInteger = Round(9.234);\nroundInteger = Round(9.532);\nroundInteger = Round(9.45);",
+                "condition": "true",
+                "ruleKey": "rule_wicjhlbk",
+                "ruleName": "round",
+                "status": 1,
+                "id": "rule_wicjhlbk",
+                "pid": "ruleset_jbxbueay",
+                "index": 5
+              },
+              {
+                "action": "sqrtDouble = Sqrt(64);\nsqrtDouble = Sqrt(5);",
+                "condition": "true",
+                "ruleKey": "rule_hldbiljs",
+                "ruleName": "sqrt",
+                "status": 1,
+                "id": "rule_hldbiljs",
+                "pid": "ruleset_jbxbueay",
+                "index": 6
+              },
+              {
+                "action": "nextRandomInteger = NextRandomInteger();\nnextRandomInteger1 = NextRandomInteger(100);\nnextRandomInteger2  = NextRandomInteger(10, 20);\nnextRandomDouble = NextRandomDouble()",
+                "condition": "true",
+                "ruleKey": "rule_htjrzzke",
+                "ruleName": "nextRandomInteger",
+                "status": 1,
+                "id": "rule_htjrzzke",
+                "pid": "ruleset_jbxbueay",
+                "index": 7
+              }
+            ],
+            "rulesetKey": "ruleset_jbxbueay",
+            "rulesetName": "compute",
+            "status": 1,
+            "id": "ruleset_jbxbueay",
+            "index": 0
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "9c9eb07a-8079-442d-8345-608cf4cc1ea5",
+        "targetNodeKey": "d1169223-c3b5-4fe9-955c-c37db7420d5a",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "整型变量",
+        "varKey": "intVar1",
+        "varSource": "CONTEXT",
+        "varType": "Integer",
+        "path": "intVar1"
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "绝对值",
+        "varKey": "absInteger",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "absInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "向上取整",
+        "varKey": "ceilDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "ceilDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "向下取整",
+        "varKey": "floorDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "floorDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "对数",
+        "varKey": "logDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "logDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "对数10",
+        "varKey": "log10Double",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "log10Double"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "maxInteger",
+        "varKey": "maxInteger",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "maxInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "maxDouble",
+        "varKey": "maxDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "maxDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "minInteger",
+        "varKey": "minInteger",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "minInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "minDouble",
+        "varKey": "minDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "minDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "powDouble",
+        "varKey": "powDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "powDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "roundInteger",
+        "varKey": "roundInteger",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "roundInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "sqrtDouble",
+        "varKey": "sqrtDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "sqrtDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 13,
+        "required": false,
+        "varDesc": "nextRandomInteger",
+        "varKey": "nextRandomInteger",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "nextRandomInteger"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 14,
+        "required": false,
+        "varDesc": "nextRandomInteger1",
+        "varKey": "nextRandomInteger1",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "nextRandomInteger1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 15,
+        "required": false,
+        "varDesc": "nextRandomInteger2",
+        "varKey": "nextRandomInteger2",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "nextRandomInteger2"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 16,
+        "required": false,
+        "varDesc": "absFloat",
+        "varKey": "absFloat",
+        "varSource": "DEFAULT",
+        "varType": "Float",
+        "path": "absFloat"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 17,
+        "required": false,
+        "varDesc": "absDouble",
+        "varKey": "absDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "absDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 18,
+        "required": false,
+        "varDesc": "maxFloat",
+        "varKey": "maxFloat",
+        "varSource": "DEFAULT",
+        "varType": "Float",
+        "path": "maxFloat"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 19,
+        "required": false,
+        "varDesc": "minFloat",
+        "varKey": "minFloat",
+        "varSource": "DEFAULT",
+        "varType": "Float",
+        "path": "minFloat"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 20,
+        "required": false,
+        "varDesc": "nextRandomDouble",
+        "varKey": "nextRandomDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "nextRandomDouble"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 21,
+        "required": false,
+        "varDesc": "logBaseDouble",
+        "varKey": "logBaseDouble",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "logBaseDouble"
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

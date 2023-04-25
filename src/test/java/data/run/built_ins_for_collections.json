@@ -1,0 +1,203 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "4",
+  "testDataList": [
+    {
+      "documentId": 168,
+      "documentName": "测试文档3",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "4",
+      "testDocumentVariableSummaryVo": {
+        "inner": [],
+        "input": [
+          {
+            "childTestDocumentVariableList": [
+              {
+                "testValue": "22",
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "Integer"
+              },
+              {
+                "testValue": "12",
+                "varDesc": "items",
+                "varKey": "items1",
+                "varType": "Integer"
+              },
+              {
+                "testValue": "45",
+                "varDesc": "items",
+                "varKey": "items2",
+                "varType": "Integer"
+              },
+              {
+                "testValue": "8",
+                "varDesc": "items",
+                "varKey": "items3",
+                "varType": "Integer"
+              },
+              {
+                "testValue": "3",
+                "varDesc": "items",
+                "varKey": "items4",
+                "varType": "Integer"
+              }
+            ],
+            "varDesc": "arrInteger",
+            "varKey": "arrInteger",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "testValue": "beijing",
+                "varDesc": "items",
+                "varKey": "items0",
+                "varType": "String"
+              },
+              {
+                "testValue": "shanghai",
+                "varDesc": "items",
+                "varKey": "items1",
+                "varType": "String"
+              },
+              {
+                "testValue": "shanghai",
+                "varDesc": "items",
+                "varKey": "items2",
+                "varType": "String"
+              },
+              {
+                "testValue": "shenzhen",
+                "varDesc": "items",
+                "varKey": "items3",
+                "varType": "String"
+              },
+              {
+                "testValue": "chengdu",
+                "varDesc": "items",
+                "varKey": "items4",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "arrString",
+            "varKey": "arrString",
+            "varType": "Array"
+          }
+        ],
+        "output": [
+          {
+            "varDesc": "anyCalculation",
+            "varKey": "anyCalculation",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "countCalculation",
+            "varKey": "countCalculation",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "minCalculation",
+            "varKey": "minCalculation",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "maxCalculation",
+            "varKey": "maxCalculation",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "sumCalculation",
+            "varKey": "sumCalculation",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "averageCalculation",
+            "varKey": "averageCalculation",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "containsCalculation",
+            "varKey": "containsCalculation",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "firstCalculation",
+            "varKey": "firstCalculation",
+            "varType": "String"
+          },
+          {
+            "varDesc": "lastCalculation",
+            "varKey": "lastCalculation",
+            "varType": "String"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "distinctCalculation",
+            "varKey": "distinctCalculation",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "reverseCalculation",
+            "varKey": "reverseCalculation",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "skipCalculation",
+            "varKey": "skipCalculation",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "takeCalculation",
+            "varKey": "takeCalculation",
+            "varType": "Array"
+          },
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "items",
+                "varKey": "items",
+                "varType": "String"
+              }
+            ],
+            "varDesc": "crudCalculation",
+            "varKey": "crudCalculation",
+            "varType": "Array"
+          },
+          {
+            "varDesc": "anyCalculation1",
+            "varKey": "anyCalculation1",
+            "varType": "Boolean"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "3",
+  "testDataList": [
+    {
+      "documentId": 167,
+      "documentName": "测试文档2",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "3",
+      "testDocumentVariableSummaryVo": {
+        "inner": [],
+        "input": [
+          {
+            "testValue": "9",
+            "varDesc": "整型变量",
+            "varKey": "intVar1",
+            "varType": "Integer"
+          }
+        ],
+        "output": [
+          {
+            "varDesc": "绝对值",
+            "varKey": "absInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "向上取整",
+            "varKey": "ceilDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "向下取整",
+            "varKey": "floorDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "对数",
+            "varKey": "logDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "对数10",
+            "varKey": "log10Double",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "maxInteger",
+            "varKey": "maxInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "maxDouble",
+            "varKey": "maxDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "minInteger",
+            "varKey": "minInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "minDouble",
+            "varKey": "minDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "powDouble",
+            "varKey": "powDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "roundInteger",
+            "varKey": "roundInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "sqrtDouble",
+            "varKey": "sqrtDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "nextRandomInteger",
+            "varKey": "nextRandomInteger",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "nextRandomInteger1",
+            "varKey": "nextRandomInteger1",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "nextRandomInteger2",
+            "varKey": "nextRandomInteger2",
+            "varType": "Integer"
+          },
+          {
+            "varDesc": "absFloat",
+            "varKey": "absFloat",
+            "varType": "Float"
+          },
+          {
+            "varDesc": "absDouble",
+            "varKey": "absDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "maxFloat",
+            "varKey": "maxFloat",
+            "varType": "Float"
+          },
+          {
+            "varDesc": "minFloat",
+            "varKey": "minFloat",
+            "varType": "Float"
+          },
+          {
+            "varDesc": "nextRandomDouble",
+            "varKey": "nextRandomDouble",
+            "varType": "Double"
+          },
+          {
+            "varDesc": "logBaseDouble",
+            "varKey": "logBaseDouble",
+            "varType": "Double"
+          }
+        ]
+      }
+    }
+  ]
+}

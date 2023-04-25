@@ -1,0 +1,444 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "4",
+  "decisionFlowConfig": {
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "3c44cc27-9f3a-4c8b-b407-8965ea51ee26",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "collection",
+        "nodeKey": "a1c05f91-5942-44c2-9f53-4c0024d3007a",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_qrphobjv",
+            "ruleList": [
+              {
+                "action": "anyCalculation = true",
+                "condition": "arrInteger.Any()",
+                "elseAction": "",
+                "ruleKey": "rule_rivtqmbn",
+                "ruleName": "any",
+                "status": 1,
+                "id": "rule_rivtqmbn",
+                "pid": "ruleset_chwvlaar",
+                "index": 0
+              },
+              {
+                "action": "countCalculation = arrInteger.Count()",
+                "condition": "true",
+                "ruleKey": "rule_ahamndzt",
+                "ruleName": "count",
+                "status": 1,
+                "id": "rule_ahamndzt",
+                "pid": "ruleset_chwvlaar",
+                "index": 1
+              },
+              {
+                "action": "minCalculation = arrInteger.Min();\nmaxCalculation = arrInteger.Max()",
+                "condition": "true",
+                "ruleKey": "rule_xlgdscgq",
+                "ruleName": "min&max",
+                "status": 1,
+                "id": "rule_xlgdscgq",
+                "pid": "ruleset_chwvlaar",
+                "index": 2
+              },
+              {
+                "action": "sumCalculation = arrInteger.Sum();\naverageCalculation = arrInteger.Average()",
+                "condition": "true",
+                "ruleKey": "rule_zcmonjqy",
+                "ruleName": "sum&average",
+                "status": 1,
+                "id": "rule_zcmonjqy",
+                "pid": "ruleset_chwvlaar",
+                "index": 3
+              },
+              {
+                "action": "containsCalculation = true",
+                "condition": "arrString.Contains(\"shanghai\")",
+                "ruleKey": "rule_srcxbdpi",
+                "ruleName": "contains",
+                "status": 1,
+                "id": "rule_srcxbdpi",
+                "pid": "ruleset_chwvlaar",
+                "index": 4
+              },
+              {
+                "action": "firstCalculation = arrString.First();\nlastCalculation = arrString.Last()",
+                "condition": "arrString.Count() > 0",
+                "elseAction": "firstCalculation = \"empty collection\";\nlastCalculation = \"empty collection\"",
+                "ruleKey": "rule_uyoajeib",
+                "ruleName": "first&last",
+                "status": 1,
+                "id": "rule_uyoajeib",
+                "pid": "ruleset_chwvlaar",
+                "index": 5
+              },
+              {
+                "action": "distinctCalculation = arrString.Distinct()",
+                "condition": "arrString.Any()",
+                "ruleKey": "rule_vojmanua",
+                "ruleName": "distinct",
+                "status": 1,
+                "id": "rule_vojmanua",
+                "pid": "ruleset_chwvlaar",
+                "index": 6
+              },
+              {
+                "action": "reverseCalculation = arrString.Reverse()",
+                "condition": "arrString.Any()",
+                "ruleKey": "rule_xiozuqia",
+                "ruleName": "reverse",
+                "status": 1,
+                "id": "rule_xiozuqia",
+                "pid": "ruleset_chwvlaar",
+                "index": 7
+              },
+              {
+                "action": "skipCalculation = arrString.Skip(2);\ntakeCalculation = arrString.Take(2)",
+                "condition": "true",
+                "ruleKey": "rule_gpaetnoh",
+                "ruleName": "take&skip",
+                "status": 1,
+                "id": "rule_gpaetnoh",
+                "pid": "ruleset_chwvlaar",
+                "index": 8
+              }
+            ],
+            "rulesetKey": "ruleset_chwvlaar",
+            "rulesetName": "calculation",
+            "status": 1,
+            "id": "ruleset_chwvlaar",
+            "index": 0
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_qrphobjv",
+            "ruleList": [
+              {
+                "action": "crudCalculation.Append(\"beijing\");\ncrudCalculation.Append(\"shanghai\");\ncrudCalculation.Append(\"tianjin\");\ncrudCalculation.Append(\"chongqing\");\ncrudCalculation.Append(\"wuhan\");",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_piiwktky",
+                "ruleName": "append",
+                "status": 1,
+                "id": "rule_piiwktky",
+                "pid": "ruleset_dajisbpa",
+                "index": 0
+              },
+              {
+                "action": "crudCalculation.Insert(\"guangzhou\")",
+                "condition": "true",
+                "ruleKey": "rule_tzownfcu",
+                "ruleName": "insert",
+                "status": 1,
+                "id": "rule_tzownfcu",
+                "pid": "ruleset_dajisbpa",
+                "index": 1
+              },
+              {
+                "action": "crudCalculation.Remove(\"wuhan\")",
+                "condition": "true",
+                "ruleKey": "rule_sbppbvbl",
+                "ruleName": "remove",
+                "status": 1,
+                "id": "rule_sbppbvbl",
+                "pid": "ruleset_dajisbpa",
+                "index": 2
+              },
+              {
+                "action": "crudCalculation.Clear();\nanyCalculation1 = crudCalculation.Any()",
+                "condition": "crudCalculation.Count() > 0",
+                "ruleKey": "rule_fjosflcz",
+                "ruleName": "clear",
+                "status": 1,
+                "id": "rule_fjosflcz",
+                "pid": "ruleset_dajisbpa",
+                "index": 3
+              }
+            ],
+            "rulesetKey": "ruleset_dajisbpa",
+            "rulesetName": "crud",
+            "status": 1,
+            "id": "ruleset_dajisbpa",
+            "index": 1
+          }
+        ],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "3c44cc27-9f3a-4c8b-b407-8965ea51ee26",
+        "targetNodeKey": "a1c05f91-5942-44c2-9f53-4c0024d3007a",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "arrInteger",
+        "varKey": "arrInteger",
+        "varSource": "CONTEXT",
+        "varType": "Array",
+        "subVarType": "Integer",
+        "path": "arrInteger",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "arrString",
+        "varKey": "arrString",
+        "varSource": "CONTEXT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "arrString",
+        "childVariableList": []
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "anyCalculation",
+        "varKey": "anyCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "anyCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "countCalculation",
+        "varKey": "countCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "countCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "minCalculation",
+        "varKey": "minCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "minCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "maxCalculation",
+        "varKey": "maxCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "maxCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "sumCalculation",
+        "varKey": "sumCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Integer",
+        "path": "sumCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "averageCalculation",
+        "varKey": "averageCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Double",
+        "path": "averageCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "containsCalculation",
+        "varKey": "containsCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "containsCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "firstCalculation",
+        "varKey": "firstCalculation",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "firstCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "lastCalculation",
+        "varKey": "lastCalculation",
+        "varSource": "DEFAULT",
+        "varType": "String",
+        "path": "lastCalculation"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "distinctCalculation",
+        "varKey": "distinctCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "distinctCalculation",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "reverseCalculation",
+        "varKey": "reverseCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "reverseCalculation",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "skipCalculation",
+        "varKey": "skipCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "skipCalculation",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 13,
+        "required": false,
+        "varDesc": "takeCalculation",
+        "varKey": "takeCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "takeCalculation",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 14,
+        "required": false,
+        "varDesc": "crudCalculation",
+        "varKey": "crudCalculation",
+        "varSource": "DEFAULT",
+        "varType": "Array",
+        "subVarType": "String",
+        "path": "crudCalculation",
+        "childVariableList": []
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 15,
+        "required": false,
+        "varDesc": "anyCalculation1",
+        "varKey": "anyCalculation1",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "anyCalculation1"
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}
