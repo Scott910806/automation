@@ -1,0 +1,5 @@
+package gsamples
+
+class hello {
+
+}
