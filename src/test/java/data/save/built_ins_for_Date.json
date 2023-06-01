@@ -1,0 +1,466 @@
+{
+  "decisionKey": "JC-202304240001",
+  "version": "8",
+  "decisionFlowConfig": {
+    "decisionFlowKey": "decisionFlow_vxckndls",
+    "nodeList": [
+      {
+        "nodeName": "开始",
+        "nodeKey": "node_vkrwlcai",
+        "nodeType": "START",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [],
+        "onEnter": "",
+        "onExit": "",
+        "onException": ""
+      },
+      {
+        "nodeName": "Date",
+        "nodeKey": "node_wdlvujld",
+        "nodeType": "RULE",
+        "executionMode": "ALL",
+        "exceptionAction": "",
+        "rulesetList": [
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_wdlvujld",
+            "ruleList": [
+              {
+                "action": "scott.day = birthday.Day;\nscott.month = birthday.Month;\nscott.year = birthday.Year;\nscott.hour = birthday.Hour;\nscott.minute = birthday.Minute;\nscott.second = birthday.Second",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_pxvlvvyw",
+                "ruleName": "property",
+                "status": 1,
+                "id": "rule_pxvlvvyw",
+                "pid": "ruleset_pxepnyxj",
+                "index": 0
+              },
+              {
+                "action": "today = Today();\nuniversalTime = anotherDate.ToUniversalTime();\nnow = Now();\nuniversalTime1 = Now().ToUniversalTime();",
+                "condition": "true",
+                "ruleKey": "rule_ghybjenl",
+                "ruleName": "transfer",
+                "status": 1,
+                "id": "rule_ghybjenl",
+                "pid": "ruleset_pxepnyxj",
+                "index": 1
+              }
+            ],
+            "rulesetKey": "ruleset_pxepnyxj",
+            "rulesetName": "Samples with Date",
+            "status": 1,
+            "id": "ruleset_pxepnyxj",
+            "index": 0
+          },
+          {
+            "blockType": "RULESET",
+            "condition": "",
+            "defaultAction": "",
+            "executionMode": "ALL",
+            "nodeKey": "node_wdlvujld",
+            "ruleList": [
+              {
+                "action": "OUTPUT.addTimeSpan = anotherDate.Add(TimeSpan(2,12,30,40));\nOUTPUT.addTimeSpan1 = anotherDate.Add(TimeSpan(-2,-12,-30,-40));",
+                "condition": "true",
+                "elseAction": "",
+                "ruleKey": "rule_mwucjumq",
+                "ruleName": "timeSpan",
+                "status": 1,
+                "id": "rule_mwucjumq",
+                "pid": "ruleset_eccvjjkw",
+                "index": 0
+              },
+              {
+                "action": "withIn6Months = true;\n",
+                "condition": "anotherDate >= Now().AddMonths(-6)",
+                "elseAction": "withIn6Months = false",
+                "ruleKey": "rule_cjdjqquz",
+                "ruleName": "addMonths",
+                "status": 1,
+                "id": "rule_cjdjqquz",
+                "pid": "ruleset_eccvjjkw",
+                "index": 1
+              },
+              {
+                "action": "withIn1Year = true;\n",
+                "condition": "anotherDate >= Now().AddYears(-1)",
+                "elseAction": "withIn1Year = false",
+                "ruleKey": "rule_ngsuydiy",
+                "ruleName": "addYears",
+                "status": 1,
+                "id": "rule_ngsuydiy",
+                "pid": "ruleset_eccvjjkw",
+                "index": 2
+              },
+              {
+                "action": "in15Days = true;\n",
+                "condition": "anotherDate <= Now().AddDays(15)",
+                "elseAction": "in15Days = false;\n",
+                "ruleKey": "rule_cenbqvbz",
+                "ruleName": "addDays",
+                "status": 1,
+                "id": "rule_cenbqvbz",
+                "pid": "ruleset_eccvjjkw",
+                "index": 3
+              },
+              {
+                "action": "in30Seconds = true;\n",
+                "condition": "anotherDate <= Now().AddSeconds(30)",
+                "elseAction": "in30Seconds = false;",
+                "ruleKey": "rule_ijoespkl",
+                "ruleName": "addSeconds",
+                "status": 1,
+                "id": "rule_ijoespkl",
+                "pid": "ruleset_eccvjjkw",
+                "index": 4
+              },
+              {
+                "pid": "ruleset_eccvjjkw",
+                "rulesetKey": "de733885-22c1-4ea5-923b-6a9efd091577",
+                "id": "de733885-22c1-4ea5-923b-6a9efd091577",
+                "addId": "de733885-22c1-4ea5-923b-6a9efd091577",
+                "status": 1,
+                "condition": "true",
+                "defaultAction": "",
+                "index": 5,
+                "ruleName": 6,
+                "action": "addMonths = Today().AddMonths(4);\naddYears = Today().AddYears(2);\naddDays = Today().AddDays(-10);\naddSeconds = Today().AddSeconds(-20);"
+              }
+            ],
+            "rulesetKey": "ruleset_eccvjjkw",
+            "rulesetName": "TimeCompute",
+            "status": 1,
+            "id": "ruleset_eccvjjkw",
+            "index": 1
+          }
+        ],
+        "onEnter": "INPUT.birthday = Date(\"1991-06-26 06:30:55\", \"yyyy-MM-dd HH:mm:ss\")",
+        "onExit": "",
+        "onException": ""
+      }
+    ],
+    "lineList": [
+      {
+        "sourceNodeKey": "node_vkrwlcai",
+        "targetNodeKey": "node_wdlvujld",
+        "condition": "",
+        "order": 1
+      }
+    ]
+  },
+  "variableSummary": {
+    "input": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": true,
+        "varDesc": "生日",
+        "varKey": "birthday",
+        "varSource": "CONTEXT",
+        "varType": "Date",
+        "path": "birthday"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": true,
+        "varDesc": "随便一个时间",
+        "varKey": "anotherDate",
+        "varSource": "CONTEXT",
+        "varType": "Date",
+        "path": "anotherDate"
+      }
+    ],
+    "output": [
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 1,
+        "required": false,
+        "varDesc": "一个人名",
+        "varKey": "scott",
+        "varSource": "DEFAULT",
+        "varType": "Object",
+        "path": "scott",
+        "childVariableList": [
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 1,
+            "required": false,
+            "varDesc": "日",
+            "varKey": "day",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.day"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 2,
+            "required": false,
+            "varDesc": "月",
+            "varKey": "month",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.month"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 3,
+            "required": false,
+            "varDesc": "年",
+            "varKey": "year",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.year"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 4,
+            "required": false,
+            "varDesc": "时",
+            "varKey": "hour",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.hour"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 5,
+            "required": false,
+            "varDesc": "分",
+            "varKey": "minute",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.minute"
+          },
+          {
+            "desensitizationFlag": "AUTO",
+            "exceptionValues": [],
+            "level": 2,
+            "monitorFlag": false,
+            "orderNo": 6,
+            "required": false,
+            "varDesc": "秒",
+            "varKey": "second",
+            "varSource": "DEFAULT",
+            "varType": "Integer",
+            "path": "scott.second"
+          }
+        ]
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 2,
+        "required": false,
+        "varDesc": "可以当作utc",
+        "varKey": "universalTime",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "universalTime"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 3,
+        "required": false,
+        "varDesc": "是否在6个月内",
+        "varKey": "withIn6Months",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "withIn6Months"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 4,
+        "required": false,
+        "varDesc": "是否在1年内",
+        "varKey": "withIn1Year",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "withIn1Year"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 5,
+        "required": false,
+        "varDesc": "是否未来15天内",
+        "varKey": "in15Days",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "in15Days"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 6,
+        "required": false,
+        "varDesc": "半分钟内",
+        "varKey": "in30Seconds",
+        "varSource": "DEFAULT",
+        "varType": "Boolean",
+        "path": "in30Seconds"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 7,
+        "required": false,
+        "varDesc": "今日",
+        "varKey": "today",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "today"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 8,
+        "required": false,
+        "varDesc": "此时",
+        "varKey": "now",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "now"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 9,
+        "required": false,
+        "varDesc": "可以当作utc1",
+        "varKey": "universalTime1",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "universalTime1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 10,
+        "required": false,
+        "varDesc": "加一段时间",
+        "varKey": "addTimeSpan",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addTimeSpan"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 11,
+        "required": false,
+        "varDesc": "减一段时间1",
+        "varKey": "addTimeSpan1",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addTimeSpan1"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 12,
+        "required": false,
+        "varDesc": "addYears",
+        "varKey": "addYears",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addYears"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 13,
+        "required": false,
+        "varDesc": "addMonths",
+        "varKey": "addMonths",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addMonths"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 14,
+        "required": false,
+        "varDesc": "addDays",
+        "varKey": "addDays",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addDays"
+      },
+      {
+        "desensitizationFlag": "AUTO",
+        "exceptionValues": [],
+        "level": 1,
+        "monitorFlag": false,
+        "orderNo": 15,
+        "required": false,
+        "varDesc": "addSeconds",
+        "varKey": "addSeconds",
+        "varSource": "DEFAULT",
+        "varType": "Date",
+        "path": "addSeconds"
+      }
+    ]
+  },
+  "customFunctionConfig": {
+    "customFunctionList": []
+  }
+}

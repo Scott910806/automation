@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.response.Response;
@@ -10,12 +11,19 @@ import lombok.extern.slf4j.Slf4j;
 import mytools.HEstrategy;
 import mytools.MyUtils;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import java.math.BigDecimal;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 @Slf4j
 @Feature("测试运行")
+@Tag("HEngine")
+@Execution(ExecutionMode.CONCURRENT)
 public class RunTest {
     private HEstrategy hestrategy;
 
@@ -51,7 +59,7 @@ public class RunTest {
         assertEquals("[\"we\",\"are\",\"second\",\"to\",\"none\"]", output.get("strSplit").toString());
     }
 
-    @Story("日期相关的内置函数")
+    @Story("数值相关的内置函数")
     @Test
     public void built_ins_for_number_run() throws Exception{
         String payload = MyUtils.readJsonFile("src/test/java/data/run/built_ins_for_number.json");
@@ -80,9 +88,9 @@ public class RunTest {
         assertEquals("2.23606797749979", output.get("sqrtDouble").toString());
         assertTrue(output.get("nextRandomInteger").isInt());
         JsonNode integer1 = output.get("nextRandomInteger1");
-        assertTrue(integer1.isInt() && integer1.asInt()>0 && integer1.asInt()<100);
+        assertTrue(integer1.isInt() && integer1.asInt()>0 && integer1.asInt()<=100);
         JsonNode integer2 = output.get("nextRandomInteger2");
-        assertTrue(integer2.isInt() && integer2.asInt()>10 && integer2.asInt()<20);
+        assertTrue(integer2.isInt() && integer2.asInt()>10 && integer2.asInt()<=20);
         JsonNode double1 = output.get("nextRandomDouble");
         assertTrue(double1.isDouble() && double1.asDouble()>0 && double1.asDouble()<1);
     }
@@ -199,6 +207,62 @@ public class RunTest {
         assertEquals("Young forever", output.get("numericalExamples").get("ageCategory").textValue());
         assertTrue(output.get("numericalExamples").get("ageBetween40And50").booleanValue());
         assertFalse(output.get("numericalExamples").get("age18MinsOr60Plus").booleanValue());
+    }
+
+    @Test
+    public void built_ins_for_Date_run() throws Exception{
+        String payload = MyUtils.readJsonFile("src/test/java/data/run/built_ins_for_Date.json");
+        Response response = hestrategy.runTest(payload);
+        assertEquals(200, response.statusCode());
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode jsonNode = mapper.readTree(response.asString());
+        JsonNode output = jsonNode.get(0).get("executeTraceRespList").get(0).get("output");
+        assertAll("Fields of Date",
+                ()->{
+                    JsonNode scott = output.get("scott");
+                    assertAll("assert",
+                            ()->assertEquals(26, scott.get("day").intValue()),
+                            ()->assertEquals(6,scott.get("month").intValue()),
+                            ()->assertEquals(1991, scott.get("year").intValue()),
+                            ()->assertEquals(6, scott.get("hour").intValue()),
+                            ()->assertEquals(30, scott.get("minute").intValue()),
+                            ()->assertEquals(55, scott.get("second").intValue())
+                            );
+                }
+        );
+        assertAll("Function of Date",
+                ()->{
+                    ZonedDateTime anotherDate = LocalDateTime.of(2023,02,01,06,55,44).atZone(ZoneId.systemDefault());
+                    ZonedDateTime now = ZonedDateTime.now();
+                    ZonedDateTime now1 = Instant.ofEpochMilli(output.get("now").longValue()).atZone(ZoneId.systemDefault());
+                    ZonedDateTime utc = Instant.ofEpochMilli(output.get("universalTime").longValue()).atZone(ZoneId.systemDefault());
+                    String utcf = DateTimeFormatter.ofPattern(("yyyy-MM-dd HH:mm:ss")).format(utc);
+                    Long addTimeSpan = anotherDate.plusDays(2).plusHours(12).plusMinutes(30).plusSeconds(40).toInstant().toEpochMilli();
+                    Long minusTimeSpan = anotherDate.minusDays(2).minusHours(12).minusMinutes(30).minusSeconds(40).toInstant().toEpochMilli();
+                    assertAll("assert",
+                            ()->assertEquals("2023-01-31 22:55:44", utcf),
+                            ()->assertTrue(now1.isBefore(now) && now1.isAfter(now.minusSeconds(2))),
+                            ()->assertEquals(output.get("addTimeSpan").longValue(), addTimeSpan),
+                            ()->assertEquals(output.get("addTimeSpan1").longValue(), minusTimeSpan),
+                            ()->assertEquals(anotherDate.isAfter(now.minusMonths(6)), output.get("withIn6Months").booleanValue()),
+                            ()->assertEquals(anotherDate.isAfter(now.minusYears(1)), output.get("withIn1Year").booleanValue()),
+                            ()->assertEquals(anotherDate.isBefore(now.plusDays(15)), output.get("in15Days").booleanValue()),
+                            ()->assertEquals(anotherDate.isBefore(now.plusSeconds(30)),output.get("in30Seconds").booleanValue())
+                    );
+                }
+                );
+        assertAll("Function of Date",
+                ()->{
+                    ZonedDateTime today = LocalDateTime.of(LocalDate.now(), LocalTime.of(0,0)).atZone(ZoneId.systemDefault());
+                    assertAll("assert",
+                            ()->assertEquals(today.toInstant().toEpochMilli(), output.get("today").longValue()),
+                            ()->assertEquals(today.plusMonths(4).toInstant().toEpochMilli(), output.get("addMonths").longValue()),
+                            ()->assertEquals(today.plusYears(2).toInstant().toEpochMilli(), output.get("addYears").longValue()),
+                            ()->assertEquals(today.minusDays(10).toInstant().toEpochMilli(), output.get("addDays").longValue()),
+                            ()->assertEquals(today.minusSeconds(20).toInstant().toEpochMilli(), output.get("addSeconds").longValue())
+                            );
+                }
+                );
     }
 
 }

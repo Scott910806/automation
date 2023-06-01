@@ -8,11 +8,16 @@ import lombok.extern.slf4j.Slf4j;
 import mytools.HEstrategy;
 import mytools.MyUtils;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 @Slf4j
 @Feature("检查、编译、翻译、保存")
+@Tag("HEngine")
+@Execution(ExecutionMode.CONCURRENT)
 public class TranslateTest {
     private HEstrategy hEstrategy;
 
@@ -28,7 +33,8 @@ public class TranslateTest {
             "src/test/java/data/save/built_ins_for_collections.json",
             "src/test/java/data/save/built_ins_for_type_check_and_conversion.json",
             "src/test/java/data/save/heel_for_LINQ.json",
-            "src/test/java/data/save/heel_samples.json"
+            "src/test/java/data/save/heel_samples.json",
+            "src/test/java/data/save/built_ins_for_Date.json"
     })
     public void translate(String path) throws Exception{
         String payload = MyUtils.readJsonFile(path);

@@ -1,0 +1,143 @@
+{
+  "decisionKey": "JC-202304240001",
+  "decisionVersion": "8",
+  "testDataList": [
+    {
+      "documentId": 178,
+      "documentName": "测试文档7",
+      "decisionKey": "JC-202304240001",
+      "decisionVersion": "8",
+      "testDocumentVariableSummaryVo": {
+        "input": [
+          {
+            "testValue": "2022-02-22 22:22:22",
+            "varDesc": "生日",
+            "varKey": "birthday",
+            "varType": "Date"
+          },
+          {
+            "testValue": "2023-02-01 06:55:44",
+            "varDesc": "随便一个时间",
+            "varKey": "anotherDate",
+            "varType": "Date"
+          }
+        ],
+        "inner": [],
+        "output": [
+          {
+            "childTestDocumentVariableList": [
+              {
+                "varDesc": "日",
+                "varKey": "day",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "月",
+                "varKey": "month",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "年",
+                "varKey": "year",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "时",
+                "varKey": "hour",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "分",
+                "varKey": "minute",
+                "varType": "Integer"
+              },
+              {
+                "varDesc": "秒",
+                "varKey": "second",
+                "varType": "Integer"
+              }
+            ],
+            "varDesc": "一个人名",
+            "varKey": "scott",
+            "varType": "Object"
+          },
+          {
+            "varDesc": "可以当作utc",
+            "varKey": "universalTime",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "生日当天的时间",
+            "varKey": "timeOfBirthday",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "是否在6个月内",
+            "varKey": "withIn6Months",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "是否在1年内",
+            "varKey": "withIn1Year",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "是否未来15天内",
+            "varKey": "in15Days",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "半分钟内",
+            "varKey": "in30Seconds",
+            "varType": "Boolean"
+          },
+          {
+            "varDesc": "今日",
+            "varKey": "today",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "此时",
+            "varKey": "now",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "可以当作utc1",
+            "varKey": "universalTime1",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "加一段时间",
+            "varKey": "addTimeSpan",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "减一段时间1",
+            "varKey": "addTimeSpan1",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "addYears",
+            "varKey": "addYears",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "addMonths",
+            "varKey": "addMonths",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "addDays",
+            "varKey": "addDays",
+            "varType": "Date"
+          },
+          {
+            "varDesc": "addSeconds",
+            "varKey": "addSeconds",
+            "varType": "Date"
+          }
+        ]
+      }
+    }
+  ]
+}
