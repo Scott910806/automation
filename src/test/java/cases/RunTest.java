@@ -3,7 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.response.Response;
@@ -209,6 +208,7 @@ public class RunTest {
         assertFalse(output.get("numericalExamples").get("age18MinsOr60Plus").booleanValue());
     }
 
+    @Story("日期相关的内置函数")
     @Test
     public void built_ins_for_Date_run() throws Exception{
         String payload = MyUtils.readJsonFile("src/test/java/data/run/built_ins_for_Date.json");

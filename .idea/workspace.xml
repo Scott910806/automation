@@ -4,37 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2093fe5-8a77-466f-8e25-aa0f6a93f216" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cases/StringBuiltInsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cases/TranslateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/demo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/document.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_collections.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_number.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_string.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/built_ins_for_type_check_and_conversion.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/heel_for_LINQ.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/run/heel_samples.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_collections.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_number.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_string.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/built_ins_for_type_check_and_conversion.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/heel_for_LINQ.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/heel_samples.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/save/simpleHeel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mytools/HEstrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mytools/MyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DemoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
+    <list default="true" id="c4badd52-738c-4d2a-b778-79375e6c8d3e" name="Changes" comment="add junit demo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/AliasBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithCustomAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithInject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomCarDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomCarSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomDateDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomDateSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/EventWithSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ExtendableBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ItemWithIdentity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ItemWithRef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/MyBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/MyMinxInForIgnoreType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/RawBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/TypeEnumWithValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UnwrappedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithIdentity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithRef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Views.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/WriteAndReadDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CryptoDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PBEDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jacksonsamples/SerializationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/CsvToPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/MyArgumentAggregation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/PersonAggregator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jsamples/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jsamples/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gsamples/demo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gsamples/demo.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gsamples/hello.groovy" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +54,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -62,16 +74,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/admin/Desktop/hengine/automation/src/test/resources",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Desktop/hengine/automation/src/test/resources&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
@@ -83,111 +95,149 @@
       <recent name="mytools" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunTest.heel_samples_run">
-    <configuration name="RunTest.built_ins_for_type_check_and_conversion_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.PBEDemo">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cases.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
-      <option name="METHOD_NAME" value="built_ins_for_type_check_and_conversion_run" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunTest.heel_for_LINQ_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CryptoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.CryptoDemo" />
       <module name="automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cases.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
-      <option name="METHOD_NAME" value="heel_for_LINQ_run" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunTest.heel_samples_run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PBEDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.PBEDemo" />
       <module name="automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cases.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.RunTest" />
-      <option name="METHOD_NAME" value="heel_samples_run" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TranslateTest.translate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="demo" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.TranslateTest" />
-      <option name="METHOD_NAME" value="translate(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:cases.TranslateTest]/[test-template:translate(java.lang.String)]/[test-template-invocation:#5]" />
-      </uniqueIds>
+      <setting name="path" value="file://$PROJECT_DIR$/src/test/java/gsamples/demo.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/test/java/gsamples" />
+      <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TranslateTest.translate.[5] src/test/java/data/save/built_ins_for_type_check_and_conversion.json" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SerializationTest.givenNotAllFieldsHaveValuesInJson_whenDeserializingAJsonToAClass_thenCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cases.*" />
+          <option name="PATTERN" value="jacksonsamples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cases" />
-      <option name="MAIN_CLASS_NAME" value="cases.TranslateTest" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:cases.TranslateTest]/[test-template:translate(java.lang.String)]/[test-template-invocation:#5]" />
-      </uniqueIds>
+      <option name="PACKAGE_NAME" value="jacksonsamples" />
+      <option name="MAIN_CLASS_NAME" value="jacksonsamples.SerializationTest" />
+      <option name="METHOD_NAME" value="givenNotAllFieldsHaveValuesInJson_whenDeserializingAJsonToAClass_thenCorrect" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RunTest.heel_samples_run" />
-        <item itemvalue="JUnit.TranslateTest.translate" />
-        <item itemvalue="JUnit.RunTest.heel_for_LINQ_run" />
-        <item itemvalue="JUnit.RunTest.built_ins_for_type_check_and_conversion_run" />
-        <item itemvalue="JUnit.TranslateTest.translate.[5] src/test/java/data/save/built_ins_for_type_check_and_conversion.json" />
+        <item itemvalue="Application.PBEDemo" />
+        <item itemvalue="Application.CryptoDemo" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Groovy.demo" />
+        <item itemvalue="JUnit.SerializationTest.givenNotAllFieldsHaveValuesInJson_whenDeserializingAJsonToAClass_thenCorrect" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c2093fe5-8a77-466f-8e25-aa0f6a93f216" name="Changes" comment="" />
+      <changelist id="c4badd52-738c-4d2a-b778-79375e6c8d3e" name="Changes" comment="clean" />
       <created>1677229621601</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677229621601</updated>
     </task>
+    <task id="LOCAL-00001" summary="clean">
+      <created>1682415758087</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682415758087</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add few cases about built_ins functions for Date">
+      <created>1685583956699</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685583956699</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add junit parallel execution config">
+      <created>1685586864027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685586864027</updated>
+    </task>
+    <task id="LOCAL-00004" summary="junit assertion demo">
+      <created>1685587029411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685587029411</updated>
+    </task>
+    <task id="LOCAL-00005" summary="junit5 dynamic test and test template demo">
+      <created>1685587088161</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685587088161</updated>
+    </task>
+    <task id="LOCAL-00006" summary="junit5 condition test and custom displayName test demo">
+      <created>1685587170073</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685587170073</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first groovy program">
+      <created>1685587269496</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685587269496</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add junit demo">
+      <created>1694426815366</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694426815366</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,14 +245,42 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="myorigin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clean" />
+    <MESSAGE value="add few cases about built_ins functions for Date" />
+    <MESSAGE value="add junit parallel execution config" />
+    <MESSAGE value="junit assertion demo" />
+    <MESSAGE value="junit5 dynamic test and test template demo" />
+    <MESSAGE value="junit5 condition test and custom displayName test demo" />
+    <MESSAGE value="first groovy program" />
+    <MESSAGE value="add junit demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add junit demo" />
+  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/automation$DisplayNameDemo.ic" NAME="DisplayNameDemo Coverage Results" MODIFIED="1683276609295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>jsamples.*</FILTER>
+    </SUITE>
   </component>
 </project>
