@@ -4,47 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4badd52-738c-4d2a-b778-79375e6c8d3e" name="Changes" comment="add junit demo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/AliasBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithCustomAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/BeanWithInject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomCarDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomCarSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomDateDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/CustomDateSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/EventWithSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ExtendableBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ItemWithIdentity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/ItemWithRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/MyBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/MyMinxInForIgnoreType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/RawBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/TypeEnumWithValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UnwrappedUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithIdentity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/UserWithRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/Views.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jacksonsamples/WriteAndReadDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CryptoDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PBEDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jacksonsamples/SerializationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/CsvToPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/MyArgumentAggregation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jsamples/PersonAggregator.java" afterDir="false" />
+    <list default="true" id="c4badd52-738c-4d2a-b778-79375e6c8d3e" name="Changes" comment="add something">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jsamples/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jsamples/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cases/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gsamples/demo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gsamples/demo.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gsamples/hello.groovy" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9237d5a2-6ccd-4d15-acca-96f4b3fecb59" />
+        <option name="url" value="git@github.com:Scott910806/automation.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -237,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694426815366</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add something">
+      <created>1700832697067</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700832697067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,7 +249,8 @@
     <MESSAGE value="junit5 condition test and custom displayName test demo" />
     <MESSAGE value="first groovy program" />
     <MESSAGE value="add junit demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add junit demo" />
+    <MESSAGE value="add something" />
+    <option name="LAST_COMMIT_MESSAGE" value="add something" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
